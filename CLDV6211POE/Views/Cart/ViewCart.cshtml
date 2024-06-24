@@ -1,0 +1,49 @@
+﻿@model ShoppingCartViewModel
+@{
+    ViewData["Title"] = "View Cart";
+}
+<h1>Shopping Cart</h1>
+<hr />
+<h2 style="color:orange">@(ViewBag.CartMessage)</h2>
+<br />
+<a class="btn" style="color:white; border:#BB86FC solid; text-dark" asp-area="" asp-controller="MyWork" asp-action="Index"> Back to My work</a>
+
+<table class="table" style="color:white">
+    <thead>
+        <tr>
+            <th>Product Name</th>
+            <th>Product Price</th>
+            <th>Quantity</th>
+            <th>Subtotal</th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+
+        @foreach(var item in Model.CartItems)
+        {
+            <input type="hidden" value="@item.Products.ProductId" />
+            <tr>
+                <td>@item.Products.ProductName</td>
+                <td>@item.Products.ProductPrice</td>
+                <td>@item.Quantity</td>
+                <td>@((item.Products.ProductPrice * item.Quantity).ToString("C"))</td>
+                <td>
+                    <a asp-controller="Cart" asp-action="RemoveItem" asp-route-id="@item.Products.ProductId" class="btn" style="color:white; border:red solid;">Remove</a>
+                </td>
+            </tr>
+        }
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td>Total:</td>
+            <td>R @Model.TotalPrice?.ToString()</td>
+            <td></td>
+        </tr>
+    </tbody>
+</table>
+@if (Model.CartItems.Count != 0)
+{
+    <a asp-controller="Cart" asp-action="OrderItems" class="btn" style="color:white; border:green solid;" onclick="return confirm('Order successful!')">Order</a>
+}

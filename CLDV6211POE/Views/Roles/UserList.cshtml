@@ -1,0 +1,39 @@
+﻿@model List<UserViewModel>;
+
+<h1 style="margin: 0 auto; width: 600px">User Roles</h1>
+<hr />
+    <table class="table text-light" style="font-size:20px">
+        <thead>
+            <tr>
+                <th>Username</th>
+                <th>Role</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach(var user in Model)
+            {
+                <tr>
+                    <td>@user.UserName</td>
+                    <td>
+                        @foreach(var role in user.Roles)
+                        {
+                            <span class="badge badge-info">@role</span>
+                        }
+                    </td>
+                    <td>
+                        <form asp-action="UpdateUserRole" method="post">
+                            <input type="hidden" name="userId" value="@user.UserId"/>
+                                <select class="fa-solid" name="selectedRole" class="form-control">
+                                    @foreach (var role in user.AllRoles)
+                                    {
+                                        <option>@role</option>
+                                    }
+                                </select>
+                            <button type="submit" class="btn btn-sm mt-1" style="color:white; border:#BB86FC solid;">Update Role</button>
+                        </form>
+                </td>
+                </tr>
+            }
+        </tbody>
+    </table>

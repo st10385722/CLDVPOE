@@ -1,0 +1,23 @@
+﻿@using Microsoft.AspNetCore.Identity
+@inject SignInManager<IdentityUser> SignInManager
+@inject UserManager<IdentityUser> UserManager
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+      crossorigin="anonymous" referrerpolicy="no-referrer" />
+<ul class="navbar-nav">
+@if (SignInManager.IsSignedIn(User))
+{
+    <li class="nav-item">
+            <a class="nav-link text-dark fa-solid fa-user" style="font-size:20px" asp-area="Identity" asp-page="/Account/Manage/Index" title="Manage"></a>
+            <label>@User.Identity?.Name</label>
+    </li>
+}
+else
+{
+    <li class="nav-item">
+        <a class="nav-link text-dark fa-solid" asp-area="Identity" asp-page="/Account/Register">Register</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link text-dark fa-solid" asp-area="Identity" asp-page="/Account/Login">Login</a>
+    </li>
+}
+</ul>

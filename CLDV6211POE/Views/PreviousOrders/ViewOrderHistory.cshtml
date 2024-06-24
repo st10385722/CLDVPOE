@@ -1,0 +1,42 @@
+﻿@using Microsoft.AspNetCore.Identity
+@inject SignInManager<IdentityUser> SignInManager
+@inject UserManager<IdentityUser> UserManager
+@model List<PreviousOrders>;
+
+
+<h1 class="display-4">Order history for @User.Identity.Name</h1>
+<hr />
+
+@if (SignInManager.IsSignedIn(User))
+{
+    <table class="table text-light">
+        <thead>
+            <tr>
+                <th>Order number</th>
+                <th>Purchase Date</th>
+                <th>Product Purchased</th>
+                <th>Quantity Ordered</th>
+                <th>Total</th>
+                <th>Status</th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var previousOrders in Model)
+            {
+                @if (User.Identity.Name.Equals(previousOrders.UserId))
+                {
+                    <tr>
+                        <td>OrderID @previousOrders.Id</td>
+                        <td>@previousOrders.OrderPurchaseDate</td>
+                        <td>@previousOrders.ProductName</td>
+                        <td>@previousOrders.Quantity</td>
+                        <td>R @previousOrders.Total</td>
+                        <td>@previousOrders.Status</td>
+                        <td style="white-space:nowrap">
+                    </tr>
+                }
+            }
+        </tbody>
+    </table>
+}

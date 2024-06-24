@@ -1,0 +1,14 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Profile";
+    ViewData["ActivePage"] = ManageNavPages.Index;
+}
+    
+    <h2>Username: @User.Identity.Name</h2>
+
+<partial name="_StatusMessage" for="StatusMessage" />
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}

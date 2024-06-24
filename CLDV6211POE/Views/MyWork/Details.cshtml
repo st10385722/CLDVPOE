@@ -1,0 +1,65 @@
+﻿@model CLDV6211POE.Models.Products
+
+@{
+    ViewData["Title"] = "Product Details";
+}
+<input type="hidden" value="@Model.ProductId" />
+<a asp-controller="MyWork" asp-action="Index" class="btn mt-3" style="color:white; border:#BB86FC solid; max-width:150px">Back to Products</a>
+<br />
+<div class="container">
+    <div class="row">
+        <div class="col-md-8 offset-md-2">
+            <div class="card custom-card" style="background-color: #252525">
+                <div class="card-body">
+                    <h2 class="card-title text-center">@Model.ProductName</h2>
+                    <div class="row">
+                        <div class="col-md-6 text-center">
+                            <img style="border: 2px solid; color: black" src="/images/products/@Model.ImageFileName" class="img-fluid product-image" alt="@Model.ProductName" />
+                        </div>
+                        <div class="col-md-6">
+                            <br />
+                            <p class="card-text mt-2" style="font-size:40px; color:white;"><strong></strong> @Model.ProductPrice.ToString("C")</p>
+                            <p style="color:white" class="card-text mt-2"><strong>Category:</strong> @Model.ProductCategory</p>
+                            @{
+                                if(Model.ProductAvailability > 0)
+                                {
+                                    <p style="color:white" class="card-text mt-2"><strong>Availability:</strong> @Model.ProductAvailability in stock</p>
+                                    <a asp-controller="Cart" asp-action="AddToCart" asp-route-id="@Model.ProductId" class="btn mt-3" style="color:white; border: green solid;">Add to cart</a>
+
+                                }
+                                else
+                                {
+                                    <p style="color:red; font-size:40px">This item is currently out of stock</p>    
+                                }
+                            }
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<style>
+    .custom-card {
+        border: 2px solid #BB86FC;
+        border-radius: 5px;
+        padding: 15px;
+    }
+
+    .card-title {
+        font-size: 1.5rem;
+        margin-bottom: 10px;
+    }
+
+    .card-text {
+        font-size: 1.2rem;
+        color: #555;
+    }
+
+    .product-image {
+        max-width: 100%;
+        max-height: 400px; /* Set the maximum height for the images */
+        object-fit: cover;
+    }
+</style>

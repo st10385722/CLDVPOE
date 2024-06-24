@@ -1,0 +1,45 @@
+﻿@model List<Orders>;
+@{
+    ViewData["Title"] = "Customer Orders";
+}
+<h1 class="display-1">Customer Order Requests</h1>
+<hr />
+<table class="table text-light">
+    <thead>
+        <tr>
+            <th>Order ID</th>
+            <th>Username</th>
+            <th>Product ID</th>
+            <th>Quantity</th>
+            <th>Purchase Date</th>
+            <th>Total</th>
+            <th>Status</th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var orders in Model)
+        {
+            <tr>
+                <td>OR@(orders.OrderId)</td>
+                <td>@orders.UserId</td>
+                <td>PR@(orders.ProductId)</td>
+                <td>@orders.Quantity</td>
+                <td>@orders.OrderPurchaseDate</td>
+                <td>@orders.Total</td>
+                <td>@orders.Status</td>
+                @if (orders.Status.Equals("Pending"))
+                {
+                    <td style="white-space:nowrap">
+                        <a class="btn btn-sm" style="color:white; border:green solid;" asp-controller="Orders" asp-action="Approve"
+                        asp-route-orderId="@orders.OrderId" asp-route-productId="@orders.ProductId"
+                        onclick="return confirm('Are you sure you want to approve this order?')">Approve</a>
+                        <a class="btn btn-sm" style="color:white; border:red solid;" asp-controller="Orders" asp-action="Deny"
+                           asp-route-orderId="@orders.OrderId" asp-route-productId="@orders.ProductId"
+                           onclick="return confirm('Are you sure you want to deny this order?')">Deny</a>
+                    </td>
+                }
+            </tr>
+        }
+    </tbody>
+</table>

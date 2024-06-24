@@ -1,0 +1,125 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\Niel\\source\\repos\\CLDV6211POE\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{64697E23-F86C-481E-B6C2-CA118A58AE74}|CLDV6211POE\\CLDV6211POE.csproj|c:\\users\\niel\\source\\repos\\cldv6211poe\\cldv6211poe\\wwwroot\\js\\site.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{64697E23-F86C-481E-B6C2-CA118A58AE74}|CLDV6211POE\\CLDV6211POE.csproj|solutionrelative:cldv6211poe\\wwwroot\\js\\site.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{64697E23-F86C-481E-B6C2-CA118A58AE74}|CLDV6211POE\\CLDV6211POE.csproj|c:\\users\\niel\\source\\repos\\cldv6211poe\\cldv6211poe\\views\\mywork\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{64697E23-F86C-481E-B6C2-CA118A58AE74}|CLDV6211POE\\CLDV6211POE.csproj|solutionrelative:cldv6211poe\\views\\mywork\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{64697E23-F86C-481E-B6C2-CA118A58AE74}|CLDV6211POE\\CLDV6211POE.csproj|c:\\users\\niel\\source\\repos\\cldv6211poe\\cldv6211poe\\controllers\\myworkcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{64697E23-F86C-481E-B6C2-CA118A58AE74}|CLDV6211POE\\CLDV6211POE.csproj|solutionrelative:cldv6211poe\\controllers\\myworkcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{64697E23-F86C-481E-B6C2-CA118A58AE74}|CLDV6211POE\\CLDV6211POE.csproj|c:\\users\\niel\\source\\repos\\cldv6211poe\\cldv6211poe\\views\\mywork\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{64697E23-F86C-481E-B6C2-CA118A58AE74}|CLDV6211POE\\CLDV6211POE.csproj|solutionrelative:cldv6211poe\\views\\mywork\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{64697E23-F86C-481E-B6C2-CA118A58AE74}|CLDV6211POE\\CLDV6211POE.csproj|c:\\users\\niel\\source\\repos\\cldv6211poe\\cldv6211poe\\data\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{64697E23-F86C-481E-B6C2-CA118A58AE74}|CLDV6211POE\\CLDV6211POE.csproj|solutionrelative:cldv6211poe\\data\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{64697E23-F86C-481E-B6C2-CA118A58AE74}|CLDV6211POE\\CLDV6211POE.csproj|c:\\users\\niel\\source\\repos\\cldv6211poe\\cldv6211poe\\controllers\\orderscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{64697E23-F86C-481E-B6C2-CA118A58AE74}|CLDV6211POE\\CLDV6211POE.csproj|solutionrelative:cldv6211poe\\controllers\\orderscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "site.js",
+              "DocumentMoniker": "C:\\Users\\Niel\\source\\repos\\CLDV6211POE\\CLDV6211POE\\wwwroot\\js\\site.js",
+              "RelativeDocumentMoniker": "CLDV6211POE\\wwwroot\\js\\site.js",
+              "ToolTip": "C:\\Users\\Niel\\source\\repos\\CLDV6211POE\\CLDV6211POE\\wwwroot\\js\\site.js",
+              "RelativeToolTip": "CLDV6211POE\\wwwroot\\js\\site.js",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA4AAAAyAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
+              "WhenOpened": "2024-06-24T14:04:37.033Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\Niel\\source\\repos\\CLDV6211POE\\CLDV6211POE\\Views\\MyWork\\Index.cshtml",
+              "RelativeDocumentMoniker": "CLDV6211POE\\Views\\MyWork\\Index.cshtml",
+              "ToolTip": "C:\\Users\\Niel\\source\\repos\\CLDV6211POE\\CLDV6211POE\\Views\\MyWork\\Index.cshtml*",
+              "RelativeToolTip": "CLDV6211POE\\Views\\MyWork\\Index.cshtml*",
+              "ViewState": "AQIAABQAAAAAAAAAAAAUwA4AAAAFAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-06-23T22:05:57.5Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Details.cshtml",
+              "DocumentMoniker": "C:\\Users\\Niel\\source\\repos\\CLDV6211POE\\CLDV6211POE\\Views\\MyWork\\Details.cshtml",
+              "RelativeDocumentMoniker": "CLDV6211POE\\Views\\MyWork\\Details.cshtml",
+              "ToolTip": "C:\\Users\\Niel\\source\\repos\\CLDV6211POE\\CLDV6211POE\\Views\\MyWork\\Details.cshtml",
+              "RelativeToolTip": "CLDV6211POE\\Views\\MyWork\\Details.cshtml",
+              "ViewState": "AQIAAA8AAAAAAAAAAAAAABoAAABTAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-06-23T23:04:11.73Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "MyWorkController.cs",
+              "DocumentMoniker": "C:\\Users\\Niel\\source\\repos\\CLDV6211POE\\CLDV6211POE\\Controllers\\MyWorkController.cs",
+              "RelativeDocumentMoniker": "CLDV6211POE\\Controllers\\MyWorkController.cs",
+              "ToolTip": "C:\\Users\\Niel\\source\\repos\\CLDV6211POE\\CLDV6211POE\\Controllers\\MyWorkController.cs",
+              "RelativeToolTip": "CLDV6211POE\\Controllers\\MyWorkController.cs",
+              "ViewState": "AQIAAA0AAAAAAAAAAAAUwBsAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-23T13:00:22.148Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "ApplicationDbContext.cs",
+              "DocumentMoniker": "C:\\Users\\Niel\\source\\repos\\CLDV6211POE\\CLDV6211POE\\Data\\ApplicationDbContext.cs",
+              "RelativeDocumentMoniker": "CLDV6211POE\\Data\\ApplicationDbContext.cs",
+              "ToolTip": "C:\\Users\\Niel\\source\\repos\\CLDV6211POE\\CLDV6211POE\\Data\\ApplicationDbContext.cs",
+              "RelativeToolTip": "CLDV6211POE\\Data\\ApplicationDbContext.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAAAbAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-23T21:53:02.174Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "OrdersController.cs",
+              "DocumentMoniker": "C:\\Users\\Niel\\source\\repos\\CLDV6211POE\\CLDV6211POE\\Controllers\\OrdersController.cs",
+              "RelativeDocumentMoniker": "CLDV6211POE\\Controllers\\OrdersController.cs",
+              "ToolTip": "C:\\Users\\Niel\\source\\repos\\CLDV6211POE\\CLDV6211POE\\Controllers\\OrdersController.cs",
+              "RelativeToolTip": "CLDV6211POE\\Controllers\\OrdersController.cs",
+              "ViewState": "AQIAAGEAAAAAAAAAAAApwDEAAAAmAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-23T17:17:26.217Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,92 @@
+﻿@page
+@model RegisterModel
+@{
+    ViewData["Title"] = "Register";
+}
+
+<h1>@ViewData["Title"]</h1>
+
+<div class="row">
+    <div class="col-md-4">
+        <form method="post" novalidate onsubmit="return validateForm()">
+            <hr />
+            <div asp-validation-summary="ModelOnly" class="text-danger" role="alert"></div>
+            <div class="form-floating mb-3 text-dark">
+                <input asp-for="Input.Email" class="form-control" autocomplete="username" aria-required="true" placeholder="name@example.com" />
+                <label class="fa-solid fa-envelope" asp-for="Input.Email"> Email</label>
+                <span asp-validation-for="Input.Email" class="text-danger"></span>
+            </div>
+            <div class="form-floating mb-3 text-dark">
+                <input asp-for="Input.Password" class="form-control" autocomplete="new-password" aria-required="true" placeholder="password" />
+                <label class="fa-solid fa-lock" asp-for="Input.Password"> Password</label>
+                <span asp-validation-for="Input.Password" class="text-danger"></span>
+            </div>
+            <div class="form-floating mb-3 text-dark">
+                <input asp-for="Input.ConfirmPassword" class="form-control" autocomplete="new-password" aria-required="true" placeholder="password" />
+                <label class="fa-solid fa-lock" asp-for="Input.ConfirmPassword"> Confirm Password</label>
+                <span asp-validation-for="Input.ConfirmPassword" class="text-danger"></span>
+            </div>
+            @*This is to show a drop down on the register page so the user chooses the role*@
+            <div class="form-floating mb-3">
+                <select class="fa-solid" asp-for="Input.Role" asp-items="@Model.Input.RoleList" class="form-select" aria-required="true">
+                    <option  disabled selected>Select Role</option>
+                </select>
+                <span asp-validation-for="Input.Role" class="text-danger"></span>
+            </div>
+            @*This is hidden until admin is chosen from the roles, uses javascript*@
+            <div id="adminKeyForm" style="display:none;">
+                <div class="form-floating mb-3 text-dark">
+                    <input asp-for="Input.AdminKey" id="adminKeyForm" class="form-control" aria-required="true" placeholder="admin key"/>
+                    <label class="fa-solid fa-lock" asp-for="Input.AdminKey"> Admin Key</label>
+                    <span asp-validation-for="Input.AdminKey" class="text-danger" id="adminKeyError"></span>
+                </div>
+            </div>
+            <hr />
+            <button id="registerSubmit" type="submit" class="w-100 btn btn-lg" style="color:white; border:#BB86FC solid;">Register</button>
+        </form>
+    </div>
+</div>
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+    @*This code is from a user on stack overflow, it uses java script to check a form on the html, and if it passes, shows the field to the user*@
+    <script>
+        function toggleAdminKeyForm() {
+            var adminKeyForm = document.getElementById('adminKeyForm');
+            var selectedRole = document.querySelector('select[name="Input.Role"]').value;
+            if (selectedRole === 'Admin') {
+                adminKeyForm.style.display = 'block';
+            } else {
+                adminKeyForm.style.display = 'none';
+                // Clear the admin key error when role is not Admin
+                document.getElementById('adminKeyError').innerText = '';
+            }
+        }
+
+        function validateForm() {
+            var selectedRole = document.querySelector('select[name="Input.Role"]').value;
+            if (selectedRole === 'Admin') {
+                var adminKeyInput = document.querySelector('input[name="Input.AdminKey"]').value;
+                if (adminKeyInput !== 'super-secure-key') {
+                    document.getElementById('adminKeyError').innerText = 'The admin key is incorrect. Hint, it is "super-secure-key"';
+                    return false;
+                }
+            }
+            return true;
+        }
+
+        document.addEventListener('DOMContentLoaded', function () {
+            var roleSelect = document.querySelector('select[name="Input.Role"]');
+            roleSelect.addEventListener('change', toggleAdminKeyForm);
+
+            // Attach event listener to admin key input to clear error when typing
+            var adminKeyInput = document.querySelector('input[name="Input.AdminKey"]');
+            adminKeyInput.addEventListener('input', function () {
+                document.getElementById('adminKeyError').innerText = '';
+            });
+
+            // Initial check in case the page is loaded with a pre-selected value
+            toggleAdminKeyForm();
+        });
+    </script>
+}

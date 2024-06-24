@@ -1,0 +1,37 @@
+﻿@using Microsoft.AspNetCore.Identity
+@inject SignInManager<IdentityUser> SignInManager
+@inject UserManager<IdentityUser> UserManager
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div style="margin: 0 auto; width: 800px">
+    <h1 style="align-content: center">
+        <span style="color:#BB86FC">K</span>humalo <span style="color:#BB86FC">C</span>raft
+    </h1>
+    <hr />
+    <h2 class="display-3">
+        Your
+        <span style="font-family:'Lucida Calligraphy'; color: #BB86FC">
+            one stop
+        </span>
+        arts
+        <span style="font-family:sans-serif; color:#BB86FC">
+            shop
+        </span>
+    </h2>
+    <wbr />
+    <div style="font-size:30px">
+        @if (SignInManager.IsSignedIn(User))
+        {
+            <a class="btn text-light fa-solid fa-user" style="font-size:20px; color:white; border: #BB86FC solid;" asp-area="Identity" asp-page="/Account/Manage/Index" title="Manage"></a>
+            <label>Welcome @User.Identity?.Name! It is good to see you</label>
+        }
+        else
+        {
+        <h3> Click the buttons below to get started </h3>
+            <a class="btn text-light" style="color:white; border: #BB86FC solid;" asp-area="Identity" asp-page="/Account/Register">Register</a>
+            <a class="btn text-light" style="color:white; border: #BB86FC solid;" asp-area="Identity" asp-page="/Account/Login">Login</a>
+        }
+    </div>
+</div>
